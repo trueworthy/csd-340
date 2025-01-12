@@ -20,11 +20,19 @@ h2 {
   padding-top: 15px;
 }
 
+.sentence {
+  font-style: italic;
+}
+
+.intro {
+  text-indent: 2em;
+}
+
 address {
   text-align: center;
 }
 
-a:link {
+a {
   font-weight: bold;
   font-size: 1.25em;
   color: #4F3674;
@@ -32,30 +40,10 @@ a:link {
 }
 
 a:visited {
-  text-decoration-line: line-through;
-  background-color: yellow;
   color: steelblue;
 }
 
 a:hover {
   text-decoration-line: underline;
   background-color: #D6A800;
-}
-
-a:focus {
-  color: red;
-}
-
-a:active {
-  color: black;
-  /* background-color: white;
-  text-decoration-line: none; */
-}
-
-.sentence {
-  font-style: italic;
-}
-
-p.intro {
-  text-indent: 2em;
 }
