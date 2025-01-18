@@ -1,1 +1,31 @@
+html, body {
+    font-family: 'Cardo';
+    background: #f7f7f7;
+}
 
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #3b0944;
+    color: #D6A800;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: #D6A800;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3b0944;
+}
+
+a:hover {
+    color: #1abb9c;
+}
