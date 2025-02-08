@@ -68,6 +68,7 @@ h1 {
 #movies th {
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-left: 8px;
     text-align: left;
     background-color: #3b0944;
     color: white;
