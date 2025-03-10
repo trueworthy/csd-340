@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--Lea Trueworthy Module 12.2 Assignment-->
+<html lang="en">
+
+<head>
+    <meta name="description" content="Module 12.2">
+    <meta name="keywords" content="HTML, CSS, CSD-340">
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Lea Trueworthy">
+    <meta http-equiv="pragma" content="no-cache">
+    <link href="trueworthy_Mod12_2.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <title>CSD 340 Web Development with HTML and CSS”</title>
+
+    <script>
+        const books = [
+            "Murder your Employer by Rupert Holmes",
+            "The Instructor by TR Hendricks",
+            "From Below by Darcy Coates",
+            "Grave Reservations by Cherie Priest",
+            "The Lost Village by Camilla Sten and Alexandra Fleming",
+            "The New Neighbor by Carter Wilson",
+            "The Cartographers by Peng Shepherd",
+            "Girl in Ice by Erica Ferencik",
+            "The Fields by Erin Young",
+            "Mickey7 by Edward Ashton"
+        ];
+
+        // Display Top to Bottom
+        function displayTopToBottom() {
+            // Use the original books array (1 to 10)
+            const sortedBooks = books.slice(); // Make a copy of the books array
+            displayBooks(sortedBooks, true); // Display the list in the original order (1 to 10)
+        }
+
+        // Display Bottom to Top
+        function displayBottomToTop() {
+
+            const sortedBooks = books.slice().reverse();
+            displayBooks(sortedBooks, false);
+        }
+
+        // Helper to display the book list
+        // The second argument controls the order: True or false
+        function displayBooks(sortedBooks, isTopToBottom) {
+            const bookListElement = document.getElementById("bookList");
+            bookListElement.innerHTML = '';
+
+            // Loop through the sorted books array
+            for (let i = 0; i < sortedBooks.length; i++) {
+                const listItem = document.createElement("li");
+                const number = isTopToBottom ? i + 1 : sortedBooks.length - i;
+                listItem.textContent = `${number}. ${sortedBooks[i]}`;
+                bookListElement.appendChild(listItem);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div class="left-div">
+            <h3>Top 10 Favorite Books</h3>
+            <button onclick="displayTopToBottom()">Top to Bottom</button>
+            <button onclick="displayBottomToTop()">Bottom to Top</button>
+            <hr>
+            <ol id="bookList">
+                <li>Murder your Employer by Rupert Holmes</li>
+                <li>The Instructor by TR Hendricks</li>
+                <li>From Below by Darcy Coates</li>
+                <li>Grave Reservations by Cherie Priest</li>
+                <li>The Lost Village by Camilla Sten and Alexandra Fleming</li>
+                <li>The New Neighbor by Carter Wilson</li>
+                <li>The Cartographers by Peng Shepherd</li>
+                <li>Girl in Ice by Erica Ferencik</li>
+                <li>The Fields by Erin Young</li>
+                <li>Mickey7 by Edward Ashton</li>
+            </ol>
+        </div>
+        <div class="right-div">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>The &lt;hr&gt; tag adds a horizontal line to separate content on a webpage.</li>
+                <li>Proper syntax for using CSS pseudo-classes, which allow for styling specific states of elements.
+                </li>
+                <li>The target="_blank" attribute in links is used to open them in a new browser tab or window.</li>
+                <li>The &lt;title&gt; element defines the title of the webpage, which is displayed in the browser's
+                    title bar or tab.</li>
+                <li>GitHub can be utilized as a platform to host and test websites, providing a space for version
+                    control and collaboration.</li>
+            </ul>
+        </div>
+
+        <div class="empty-space"></div>
+        <div class="link">
+            <a href="../index.html">back to Landing Page</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
